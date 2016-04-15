@@ -2,7 +2,7 @@
   "name": "emovmaps",
   "version": "1.0.0",
   "description": "maps to visulization of accidents of Cuenca",
-  "repository": "https://santteegt@bitbucket.org/ecsemanticrep/watiqay-khuska-ecuadorian-semantic-repository-for-researchers.git",
+  "repository": "https://github.com/fernandobac03/emovMaps.git",
   "main": "index.js",
    "scripts": {
     "postinstall": "bower install",

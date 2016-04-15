@@ -1,10 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" ng-app="emovApp">
     <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>EMOV - TRANSITO</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="estilos/graficoPie.css">
+      
+        <!--<link rel="stylesheet" href="wkhome/css/visuals/explorableTree.css">
+        <link rel="stylesheet" href="wkhome/css/visuals/keywordsCloud.css" >
+        <link rel="stylesheet" href="wkhome/css/visuals/genericCloud.css" type="text/css" >
+        <link rel="stylesheet" href="wkhome/css/visuals/groupbyCloud.css" type="text/css">
+        <link rel="stylesheet" href="wkhome/css/visuals/cloudCluster.css" type="text/css">
+        <link rel="stylesheet" href="wkhome/css/visuals/chart.css">
+        <link rel="stylesheet" href="wkhome/css/visuals/geoplain.css">
+        <link rel="stylesheet" href="wkhome/css/visuals/map.css">
+        <link rel="stylesheet" href="wkhome/css/app.css">
+-->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/jquery.layout/dist/jquery.layout-latest.js"></script>
+        <script src="bower_components/jquery.layout/dist/jquery.layout-latest.min.js"></script>
+        <script src="http://layout.jquery-dev.com/lib/js/jquery.layout.resizePaneAccordions-latest.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-swipe/dist/angular-swipe.min.js"></script>
+        <script src="custom_libs/angular-snapscroll.js"></script>
+        <script src="bower_components/jsonld/js/jsonld.js"></script>
+        <!-- <script src="../bower_components/angular-jsonld/dist/angular-jsonld.js"></script> -->
+        <script src="bower_components/restangular/dist/restangular.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/angular-ui-bootstrap/src/pagination/pagination.js"></script>
+        <script src="bower_components/topojson/topojson.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/d3/d3.js"></script>
+        <script src="bower_components/d3-tip/index.js"></script>
+        <script src="custom_libs/d3-context-menu/js/d3-context-menu.js"></script>
+        <script src="custom_libs/angular-sanitize/angular-sanitize.js"></script>
+
+
+
+
+
+        
+        <script src="js/controladores/controladores.js"></script>
+        <script src="js/controladores/contarAccidentes.js"></script>
+        <script src="js/controladores/searchText.js"></script>
+        <!--<script src="wkhome/js/controllers/countPublications.js"></script>
+        <script src="wkhome/js/controllers/countResearhAreas.js"></script>
+        <script src="wkhome/js/controllers/explorableTree.js"></script>
+        <script src="wkhome/js/controllers/explorableResearchArea.js"></script>
+        <script src="wkhome/js/controllers/exportController.js"></script>
+        <script src="wkhome/js/controllers/groupbyCloud.js"></script>
+        <script src="wkhome/js/controllers/keywordsCloud.js"></script>
+        <script src="wkhome/js/controllers/genericCloud.js"></script>
+        <script src="wkhome/js/controllers/map.js"></script>
+        <script src="wkhome/js/controllers/clusterGroupByCloud.js"></script>
+        <script src="wkhome/js/controllers/clusterKeywordsCloud.js"></script>
+        <script src="wkhome/js/controllers/clustersCloud.js"></script>
+        <script src="wkhome/js/controllers/translate.js"></script>
+        <script src="wkhome/js/controllers/pubInfo.js"></script>
+        -->
+
+
+         <script src="js/aplicacion_inicio.js"></script>  
+        <script src="js/servicios.js"></script>
+        <script src="js/componentes/waitingDialog.js"></script>
+        <!--<script src="/js/componentes/mapa.js"></script>-->
+
+
+        <script src="js/visualizaciones/graficoPie.js"></script>
+<!--        <script src="wkhome/js/visuals/explorableTree.js"></script>
+        <script src="wkhome/js/visuals/keywordsCloud.js"></script>
+        <script src="wkhome/js/visuals/groupbyCloud.js"></script>
+        <script src="wkhome/js/visuals/clusterGroupByCloud.js"></script>
+        <script src="wkhome/js/visuals/clusterKeywordsCloud.js"></script>
+        <script src="wkhome/js/visuals/clustersCloud.js"></script>
+        <script src="wkhome/js/visuals/genericCloud.js"></script>
+        <script src="wkhome/js/visuals/map.js"></script>
+-->
+
+        <script type="text/javascript">
+            <!--
+      $(document).ready(function () {
+                var mCarouselTO = setTimeout(function () {
+                    $('#carousel').carousel({
+                        interval: 5000,
+                        cycle: true,
+                    }).trigger('slide');
+                }, 5000);
+                var q = mCarouselTO;
+            });
+-->
+        </script>
+
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div ng-view class="container-fluid">
+
+        </div>
+
+        <!-- <div class="view-container"> -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="opacity:1; margin-bottom:0; border:0; z-index: 0;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="padding-top: 1px;" href="#"><img style="height: 50px" src=''  alt="EMOV"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">INICIO<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#/info/about">NOSOTROS</a></li>
+                        <li><a href="#/info/help">AYUDA</a></li>
+                        <li><a href="#/info/contact">CONTACTO</a></li>
+               
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right" style="padding-right:0px">
+
+                        <form class="navbar-form navbar-left" role="search" ng-submit="submit()" ng-controller="searchText">
+                            <div class="form-group">
+                                <input name="searchText" ng-model="searchText" type="text" class="form-control input-md" placeholder="BUSCAR...">
+                            </div>
+                        </form>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+        
+
+            </div>
+
+        </nav>
+   
     </body>
 </html>
