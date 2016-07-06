@@ -1,6 +1,6 @@
 {
   "endpoint": { 
-       "url" : "http://localhost:8080/marmotta/sparql/select",
+       "url" : "http://190.15.132.241/marmotta/sparql/select",
        "maxResults": 20000
    }
 }
